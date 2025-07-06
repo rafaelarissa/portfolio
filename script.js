@@ -35,8 +35,17 @@ clickProjetos.addEventListener("click", function (event) {
 clickContato.addEventListener("click", function (event) {
   event.preventDefault();
   conteudo.innerHTML =
-    "<div class=contato><form><label for=name>Nome:</label><input type=text id=name name=name required><br><label for=email>Email:</label><input type=email id=email name=email required><br><label for=telefone>Telefone:</label><input type=tel id=telefone name=telefone required><br><label for=mensagem>Mensagem:</label><textarea id=mensagem name=mensagem rows=4 cols=50 required></textarea><br><input type=submit value=Enviar mensagem></form><h1>Entre em contato comigo</h1></div>";
+    "<div class=contato><form><label for=name>Nome:</label><input type=text id=name name=name required><br><label for=email>Email:</label><input type=email id=email name=email required><br><label for=telefone>Telefone:</label><input type=tel id=telefone name=telefone required><br><label for=mensagem>Mensagem:</label><textarea id=mensagem name=mensagem rows=4 cols=50 required></textarea><br><input onClick=mostrarJanela() type=submit value=Enviar mensagem></form><h1>Entre em contato comigo</h1></div>";
 
   conteudo.style.fontFamily = "Roboto, sans-serif";
   conteudo.style.fontSize = "15px";
 });
+
+function mostrarJanela() {
+  document.getElementById("alerta").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+}
+function fecharJanela() {
+  document.getElementById("alerta").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+}
