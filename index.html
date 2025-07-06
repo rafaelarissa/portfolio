@@ -13,9 +13,8 @@
 <body>
   <header>
     <div class="topo">
-      <p><h1></h1></p>
     </div>
-    <nav class="menu">
+    <nav class="menu"> <!--O menu contém os links que darão acesso ao conteúdo. Clicar em um dos elementos âncora, acionará uma função no Javascript que controla o que será exibido dentro do elemento main-->
       <div><a href="#" id="sobre">Sobre Mim</a></div>
       <div><a href="#" id="formacao">Formação</a></div>
       <div><a href="#" id="projetos">Projetos</a></div>
@@ -23,12 +22,12 @@
     </nav>
   </header>
   <main>
-    <div id="conteudo" class="handlee-regular">Welcome</div>
-    <div id="alerta" style="display:none;">
+    <div id="conteudo" class="handlee-regular">Welcome</div><!--Conteúdo das páginas, controlado por funções Javascript-->
+    <div id="alerta" style="display:none;"><!--Esconde o alerta que é exibido ao clicar Enviar na página de contato-->
       <p>Obrigada pela mensagem! Retornarei assim que possível.</p>
       <button onclick="fecharJanela()">Fechar</button>
     </div>
-    <div id="overlay" style="display:none"></div>
+    <div id="overlay" style="display:none"></div><!--O elemento criará uma sobreposição ao conteúdo principal, e impedirá que elementos fora do alerta sejam selecionados-->
   </main>
   <script src="script.js"></script>
 </body>
